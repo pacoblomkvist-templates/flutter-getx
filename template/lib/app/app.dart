@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:template/app/common/depencencies/initial_dependency.dart';
 import 'package:template/config/build_config.dart';
 import 'package:template/config/env_config.dart';
 
@@ -19,7 +20,7 @@ class _AppState extends State<App> {
     return GetMaterialApp(
       title: _envConfig.appName,
       initialRoute: AppPages.INITIAL,
-      initialBinding: null,
+      initialBinding: InitialDependencies(),
       getPages: AppPages.routes,
       theme: null,
       debugShowCheckedModeBanner: false,

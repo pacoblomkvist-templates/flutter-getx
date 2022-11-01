@@ -4,10 +4,7 @@ import 'package:template/config/build_config.dart';
 
 import '../exceptions/api_exception.dart';
 import '../exceptions/app_exception.dart';
-import '../exceptions/json_format_exception.dart';
-import '../exceptions/network_exception.dart';
 import '../exceptions/not_found_exception.dart';
-import '../exceptions/service_unavailable_exception.dart';
 import '../exceptions/timeout_exception.dart';
 import '../exceptions/unauthorize_exception.dart';
 import '../models/page_state.dart';
@@ -77,26 +74,18 @@ abstract class BaseController extends GetxController {
       onComplete == null ? hideLoading() : onComplete();
 
       return response;
-    } on ServiceUnavailableException catch (exception) {
-      _exception = exception;
-      showErrorMessage(exception.message);
     } on UnauthorizedException catch (exception) {
       _exception = exception;
       showErrorMessage(exception.message);
     } on TimeoutException catch (exception) {
       _exception = exception;
       showErrorMessage(exception.message ?? 'Timeout exception');
-    } on NetworkException catch (exception) {
-      _exception = exception;
-      showErrorMessage(exception.message);
-    } on JsonFormatException catch (exception) {
-      _exception = exception;
-      showErrorMessage(exception.message);
     } on NotFoundException catch (exception) {
       _exception = exception;
       showErrorMessage(exception.message);
     } on ApiException catch (exception) {
       _exception = exception;
+      showErrorMessage(exception.message);
     } on AppException catch (exception) {
       _exception = exception;
       showErrorMessage(exception.message);

@@ -3,6 +3,7 @@ import 'package:logger/logger.dart';
 class EnvConfig {
   final String appName;
   final String baseUrl;
+  final String unencoded;
   final bool shouldCollectCrashLog;
 
   late final Logger logger;
@@ -10,6 +11,7 @@ class EnvConfig {
   EnvConfig({
     required this.appName,
     required this.baseUrl,
+    required this.unencoded,
     this.shouldCollectCrashLog = false,
   }) {
     logger = Logger(

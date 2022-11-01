@@ -10,8 +10,9 @@ import 'config/environment.dart';
 
 void main() {
   EnvConfig devConfig = EnvConfig(
-    appName: "FBlmk Template",
-    baseUrl: "https://api",
+    appName: "Blmk Template",
+    baseUrl: "example",
+    unencoded: "api", //do not use https 'cause its implicit in the service
     shouldCollectCrashLog: true,
   );
 

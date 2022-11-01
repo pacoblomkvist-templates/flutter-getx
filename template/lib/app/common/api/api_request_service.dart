@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:template/app/common/api/token_service.dart';
 
-import 'interceptor_http_service.dart';
+import 'http_response_handler.dart';
 
 class ApiRequestService {
   final String authority;
