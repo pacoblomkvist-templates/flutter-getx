@@ -26,7 +26,7 @@ class LanguageSelector extends StatelessWidget {
               ? BoxDecoration(
                   border:
                       Border.all(color: AppColors.colorPrimary, width: 0.5.w),
-                  color: AppColors.colorPrimary,
+                  color: Color.fromARGB(255, 73, 80, 81),
                   borderRadius: BorderRadius.circular(1.w))
               : null,
           width: width,
